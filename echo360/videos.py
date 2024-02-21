@@ -386,7 +386,7 @@ class EchoCloudVideo(EchoVideo):
             ff = ffmpy.FFmpeg(
                 global_options="-loglevel panic",
                 inputs=_inputs,
-                outputs={final_file: ["-c:v", "libx264", "-r", "30", "-b:v", "8M", "-c:a", "aac", "-b:a", "384k"]},
+                outputs={final_file: ["-c:v", "libx265", "-preset", "ultrafast", "-crf", "24", "-c:a", "aac", "-b:a", "96k" ]},
             )
             ff.run()
         except ffmpy.FFExecutableNotFoundError:
