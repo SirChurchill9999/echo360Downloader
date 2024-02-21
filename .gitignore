@@ -153,4 +153,9 @@ cython_debug/
 
 # User-specific stuff:
 .m4s
+.mp4
+# Video formats
+*.m4s
+*.mp4
+
 .DS_Store
